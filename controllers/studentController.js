@@ -6,7 +6,7 @@ import cloudinary from "../utils/cloudinary.js";
 export const getStudents = async (req, res) => {
     try {
         const students = await Student.find();
-        handleResponseSuccess(res, 200, "Get student successfully", { ...students })
+        handleResponseSuccess(res, 200, "Get student successfully", students)
     } catch (error) {
         handleResponseError(res, 500, "Lỗi máy chủ")
         return
